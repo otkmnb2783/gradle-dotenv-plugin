@@ -4,11 +4,9 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.logging.Logging
 import java.io.File
-import java.util.regex.Pattern
 
 class GradleDotenvPlugin: Plugin<Project> {
 
-    private val matcher = Pattern.compile("/^\\s*(?:export\\s+|)([\\w\\d\\.\\-_]+)\\s*=\\s*['\"]?(.*?)?['\"]?\\s*\$/")
     private val logger = Logging.getLogger(GradleDotenvPlugin::class.java)
 
     override fun apply(project: Project) {
