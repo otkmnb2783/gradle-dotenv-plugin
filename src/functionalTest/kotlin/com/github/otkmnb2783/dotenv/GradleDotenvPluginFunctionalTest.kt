@@ -23,7 +23,7 @@ class GradleDotenvPluginFunctionalTest {
         projectDir.resolve(".env").writeText("""
             MYSQL_USER=mysql_user
             MYSQL_PASSWORD=mysql_passw0rd
-            export HOGE=fuba
+            HOGE=fuga
         """)
 
         // Run the build
