@@ -30,9 +30,10 @@ dependencies {
 
 gradlePlugin {
     // Define the plugin
-    val greeting by plugins.creating {
+    val dotenv by plugins.creating {
         id = "com.github.otkmnb2783.dotenv"
         implementationClass = "com.github.otkmnb2783.dotenv.GradleDotenvPlugin"
+        version = "0.0.1"
     }
 }
 
