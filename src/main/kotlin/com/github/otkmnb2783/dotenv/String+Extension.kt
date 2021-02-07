@@ -1,9 +1,5 @@
 package com.github.otkmnb2783.dotenv
 
-fun String.isWhitespace(): Boolean {
-    return """^\s*${'$'}""".toRegex().matches(this)
-}
-
 fun String.isComment(): Boolean {
     return this.startsWith(prefix = "#") or this.startsWith(prefix = """//""")
 }
