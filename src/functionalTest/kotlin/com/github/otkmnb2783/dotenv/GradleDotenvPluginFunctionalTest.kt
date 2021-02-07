@@ -8,7 +8,7 @@ import kotlin.test.assertTrue
 class GradleDotenvPluginFunctionalTest {
     @Test fun `can load`() {
         // Setup the test build
-        val doller = '$'
+        val dollar = '$'
         val projectDir = File("build/functionalTest")
         projectDir.mkdirs()
         projectDir.resolve("settings.gradle").writeText("")
@@ -16,9 +16,13 @@ class GradleDotenvPluginFunctionalTest {
             plugins {
                 id('com.github.otkmnb2783.dotenv')
             }
-            println("${doller}{env.MYSQL_USER}")
-            println("${doller}{env.MYSQL_PASSWORD}")
-            println("${doller}{env.HOGE}")
+            dotenv {
+                dir = "../.."
+                fileName = ".env.dev"
+            }
+            println("${dollar}{env.MYSQL_USER}")
+            println("${dollar}{env.MYSQL_PASSWORD}")
+            println("${dollar}{env.HOGE}")
         """)
         projectDir.resolve(".env").writeText("""
             MYSQL_USER=mysql_user
