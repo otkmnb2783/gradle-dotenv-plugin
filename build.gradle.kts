@@ -63,7 +63,7 @@ pluginBundle {
             // id is captured from java-gradle-plugin configuration
             displayName = "Gradle Dotenv plugin"
             tags = listOf("gradle", "tags", "per", "plugin")
-            version = "0.0.1"
+            version = "0.2.0"
         }
 
     }
@@ -84,7 +84,7 @@ pluginBundle {
     mavenCoordinates {
         groupId = "com.github.otkmnb2783"
         artifactId = "dotenv-plugins"
-        version = "0.0.1"
+        version = "0.2.0"
     }
 }
 
