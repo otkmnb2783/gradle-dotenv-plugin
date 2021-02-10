@@ -20,12 +20,10 @@ repositories {
 }
 
 dependencies {
-    // Use the Kotlin JDK 8 standard library.
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")
-    // Use the Kotlin JUnit integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
+    testImplementation("io.kotlintest:kotlintest-runner-junit5:3.3.2")
 }
 
 gradlePlugin {
