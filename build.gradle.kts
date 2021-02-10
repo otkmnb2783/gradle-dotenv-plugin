@@ -32,7 +32,7 @@ gradlePlugin {
     // Define the plugin
     val dotenv by plugins.creating {
         id = "com.github.otkmnb2783.dotenv"
-        implementationClass = "com.github.otkmnb2783.dotenv.GradleDotenvPlugin"
+        implementationClass = "com.github.otkmnb2783.dotenv.DotenvPlugin"
     }
 }
 

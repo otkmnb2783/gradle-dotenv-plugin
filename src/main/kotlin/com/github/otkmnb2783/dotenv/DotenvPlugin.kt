@@ -5,18 +5,18 @@ import org.gradle.api.Project
 import org.gradle.api.logging.Logging
 import java.io.File
 
-class GradleDotenvPlugin: Plugin<Project> {
+class DotenvPlugin: Plugin<Project> {
 
-    private val logger = Logging.getLogger(GradleDotenvPlugin::class.java)
+    private val logger = Logging.getLogger(DotenvPlugin::class.java)
 
     override fun apply(project: Project) {
         logger.debug("gradle dotenv plugin applying")
-        project.extensions.create("dotenv", GradleDotenvConfiguration::class.java)
+        project.extensions.create("dotenv", DotenvConfiguration::class.java)
         val env = mutableMapOf<String, String>()
         project.extensions.add("env", env)
         project.run {
             logger.debug("gradle dotenv plugin running.")
-            val configuration = this.extensions.findByName("dotenv") as GradleDotenvConfiguration
+            val configuration = this.extensions.findByName("dotenv") as DotenvConfiguration
             val dir = configuration.dir ?: this.rootDir
             val fileName = configuration.fileName
             val separator = File.separator

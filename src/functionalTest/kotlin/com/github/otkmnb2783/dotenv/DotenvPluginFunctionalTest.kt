@@ -5,7 +5,7 @@ import org.gradle.testkit.runner.GradleRunner
 import kotlin.test.Test
 import kotlin.test.assertTrue
 
-class GradleDotenvPluginFunctionalTest {
+class DotenvPluginFunctionalTest {
     @Test fun `can load`() {
         // Setup the test build
         val dollar = '$'
